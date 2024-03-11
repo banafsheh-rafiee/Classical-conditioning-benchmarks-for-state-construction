@@ -13,7 +13,7 @@ pip install requirements.txt
 ## How to Use the Benchmarks
 The code for the trace conditioning, noisy patterning, and trace patterning benchmarks are included in `classical_conditioning_benchmarks.py`. The benchmarks inherit from the `dm_env.Environment` class from the [The DeepMind RL Environment API](https://github.com/google-deepmind/dm_env) and implement its `reset()` and `step()` functions.
 
-In order to use each of the benchmarks, you need to first instantiate an object from the class corresponding to the desired benchmark, reset the environment by calling the `reset()` function, and call the `step()` function to get the information about the current time step such as the observation and cumulant. Here is in example of using the trace conditioing benchmark:
+In order to use each of the benchmarks, you need to first instantiate an object from the class corresponding to the desired benchmark. Here is in example of instantiating an object `env` from the class corresponding to the trace conditioing benchmark:
 ```python
   env = TraceConditioning(seed=0,
                           gamma=0.9,
@@ -21,6 +21,10 @@ In order to use each of the benchmarks, you need to first instantiate an object 
                           ISI_interval=(7, 13),
                           ITI_interval=(80, 129),
                           num_distractors=0)
+```
+
+After instantiating `env`, you need to reset the environment by calling `env.reset()`, and then call `env.step()` function to get the information about the current time step such as the observation and cumulant:
+```python
   env.reset()
   for t in range(config.num_time_steps-1):
       _, cumulant, _, obs = env.step(None)
