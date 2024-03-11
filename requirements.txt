@@ -1,0 +1,4 @@
+absl-py==2.1.0
+dm-env==1.6
+dm-tree==0.1.8
+numpy==1.26.4
