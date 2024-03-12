@@ -16,6 +16,7 @@ The code for the trace conditioning, noisy patterning, and trace patterning benc
 In order to use each of the benchmarks, you need to first instantiate an object from the class corresponding to the desired benchmark. Here is in example of instantiating an object `env` from the class corresponding to the trace conditioing benchmark:
 ```python
 from classical_conditioning_benchmarks import TraceConditioning
+
 env = TraceConditioning(seed=0,
                         gamma=0.9,
                         activation_lengths = {"CS": 4, "US":2, "distractor": 4},
