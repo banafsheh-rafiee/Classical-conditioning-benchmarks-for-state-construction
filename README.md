@@ -15,12 +15,13 @@ The code for the trace conditioning, noisy patterning, and trace patterning benc
 
 In order to use each of the benchmarks, you need to first instantiate an object from the class corresponding to the desired benchmark. Here is in example of instantiating an object `env` from the class corresponding to the trace conditioing benchmark:
 ```python
-  env = TraceConditioning(seed=0,
-                          gamma=0.9,
-                          activation_lengths = {"CS": 4, "US":2, "distractor": 4},
-                          ISI_interval=(7, 13),
-                          ITI_interval=(80, 129),
-                          num_distractors=0)
+from classical_conditioning_benchmarks import TraceConditioning
+env = TraceConditioning(seed=0,
+                        gamma=0.9,
+                        activation_lengths = {"CS": 4, "US":2, "distractor": 4},
+                        ISI_interval=(7, 13),
+                        ITI_interval=(80, 129),
+                        num_distractors=0)
 ```
 
 After instantiating `env`, you need to reset the environment by calling `env.reset()`, and then call `env.step()` function to get the information about the current time step such as the observation and cumulant:
