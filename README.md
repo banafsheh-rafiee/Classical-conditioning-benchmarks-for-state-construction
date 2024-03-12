@@ -1,5 +1,5 @@
 ## Classical conditioning benchmarks for state construction
-This repository provides the benchmarks inspired by classical conditioning for state construction presented in the [From eye-blinks to state construction: Diagnostic benchmarks for online representation learning](https://journals.sagepub.com/doi/full/10.1177/10597123221085039) paper and the [State Construction in Reinforcement Learning](https://drive.google.com/drive/search?q=thesis) PhD Thesis.
+This repository provides the benchmarks inspired by classical conditioning for state construction. For a full description of the benchmarks checkout the [From eye-blinks to state construction: Diagnostic benchmarks for online representation learning](https://journals.sagepub.com/doi/full/10.1177/10597123221085039) paper and the [State Construction in Reinforcement Learning](https://drive.google.com/drive/search?q=thesis) PhD Thesis.
 
 
 <a name='specifications'></a>
