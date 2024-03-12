@@ -25,7 +25,7 @@ env = TraceConditioning(seed=0,
                         num_distractors=0)
 ```
 
-After instantiating `env`, you need to reset the environment by calling `env.reset()`, and then call `env.step()` function to get the information about the current time step such as the observation and cumulant:
+After instantiating `env`, you need to reset the environment by calling `env.reset()`. Next, you can get the information about each time step, such as the observation and cumulant, by calling `env.step`. Note that the classical conditioning benchmarks do not include any actions; therefore, we pass `None` to the `step` function:
 ```python
   env.reset()
   for t in range(config.num_time_steps-1):
