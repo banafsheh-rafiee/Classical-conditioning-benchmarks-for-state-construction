@@ -27,9 +27,10 @@ env = TraceConditioning(seed=0,
 
 After instantiating `env`, you need to reset the environment by calling `env.reset()`. Next, you can get the information about each time step, such as the observation and cumulant, by calling `env.step`. Note that the classical conditioning benchmarks do not include any actions; therefore, we pass `None` to the `step` function:
 ```python
-  env.reset()
-  for t in range(config.num_time_steps-1):
-      _, cumulant, _, obs = env.step(None)
+NUM_TIME_STEPS = 100000  
+env.reset()
+for t in range(NUM_TIME_STEPS):
+    _, cumulant, _, obs = env.step(None)
 ```
 Note that in the classial conditioning benchmarks, the cumulant is the unconditioned stimulus or US (See the paper for more information). Check out `exp.py` for a more detailed example of using the benchmarks.
 
